@@ -1,0 +1,40 @@
+
+<div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+              Update Salon contact 
+
+               {{#if success_msg}}
+                <div class="alert alert-success">{{success_msg}}</div>
+              {{/if}}
+                          </header>
+                          <div class="panel-body">
+                              <form role="form" action="/contact/update" method="post" >
+                               <input type="hidden" value="{{contact._id}}" name="_id">
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Contact Name </label>
+                                      <input class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter Salone Name" value="{{contact.name}}"  type="text">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="exampleInputPassword1">Email</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="email"  value="{{contact.email}}" placeholder="Password" type="text">
+                                  </div>
+
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1">Subject</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="subject" value="{{contact.subject}}"  designationplaceholder="Password"  type="text">
+                                  </div>
+                                   <div class="form-group">
+                                      <label for="exampleInputPassword1">Message</label>
+                                      <textarea class="form-control" id="exampleInputPassword1" name="message"  placeholder="Password">{{contact.message}}</textarea>
+                                  </div>
+                                   
+                                  <br>
+                                 
+
+                                  <button type="submit" class="btn btn-info">Submit</button>
+                              </form>
+
+                          </div>
+                      </section>
+                  </div>

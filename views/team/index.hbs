@@ -1,0 +1,51 @@
+<div class="row">
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              Responsive table
+                          </header>
+                          <div class="panel-body">
+
+                    {{#if success_msg}}
+                          <div class="alert alert-success">{{success_msg}}</div>
+                        {{/if}}
+                              <div class="table-responsive" style="overflow: hidden;" tabindex="1">
+                                  <table class="table table-bordered">
+                                      <thead>
+
+                                      <tr>
+                                          <th>Serial No.</th>
+                                          <th>Photo</th>
+                                          <th>Full Name</th>
+                                          <th>Designation</th>
+                                          <th>Facebook Link</th>
+                                          <th>Created at</th>
+                                          <th>Edit/Delete</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                      {{#each teams}}
+                                          <th scope="row"> {{@index}}</th>
+                                          <td><img src="/uploads/team/{{this.team_image_path}}" height="40px" width="40px;"></td>
+                                          <td>{{this.name}}</td>
+                                          <td>{{this.designation}}</td>
+                                          <td>{{this.facebook_link}}</td>
+                                          <td>{{this.created_date}}</td>
+                                          <td>
+                                   <a href="/team/edit/{{this._id}}" class="btn btn-success">
+                                  <i class="fa fa-pencil"></i></a>
+                                  <a href="/team/delete/{{this._id}}" class="btn btn-danger">
+                                  <i class="fa fa-trash-o"></i></a>
+               
+                                          </td>
+                                      </tr>
+                                       {{/each}}
+                                     
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>

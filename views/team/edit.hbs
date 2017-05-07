@@ -1,0 +1,48 @@
+
+<div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+              Update Salon Team Member
+
+               {{#if success_msg}}
+                <div class="alert alert-success">{{success_msg}}</div>
+              {{/if}}
+                          </header>
+                          <div class="panel-body">
+                              <form role="form" action="/team/update" method="post" enctype="multipart/form-data">
+                               <input type="hidden" value="{{team._id}}" name="_id">
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Team Name </label>
+                                      <input class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter Salone Name" value="{{team.name}}"  type="text">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="exampleInputPassword1">Designation</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="designation"  value="{{team.designation}}" placeholder="Password" type="text">
+                                  </div>
+
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1">Facebook ID</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="facebook_link" value="{{team.facebook_link}}"  designationplaceholder="Password"  type="text">
+                                  </div>
+                                   <div class="form-group">
+                                      <label for="exampleInputPassword1">Twitter Link</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="twitter_link" value="{{team.twitter_link}}" placeholder="Password" type="text">
+                                  </div>
+                                   <div class="form-group">
+                                      <label for="exampleInputPassword1">Linkind Link</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="linkind_link" value="{{team.linkind_link}}"  placeholder="Password"  type="text">
+                                  </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Personal Photo</label>
+                                      <input class="form-control" id="exampleInputPassword1" name="team_image_path" value="{{team.team_image_path}}" placeholder="Password"  type="file">
+                                       <img src="/uploads/team/{{team.team_image_path}}" class="img-circle" alt="Cinque Terre" width="100" height="100">
+                                  </div>
+                                  <br>
+                                 
+
+                                  <button type="submit" class="btn btn-info">Submit</button>
+                              </form>
+
+                          </div>
+                      </section>
+                  </div>

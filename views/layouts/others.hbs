@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ {{>header}}
+  <body>
+
+  <section id="container" class="">
+      <!--header start-->
+     {{> mainheader }}
+      <!--header end-->
+      <!--sidebar start-->
+  {{> sidebar }}
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+              <!-- page start-->
+              {{{body}}}
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+
+
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2016 &copy; FiveStarSlon by Romesh.
+              <a href="#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    
+{{> script }}
+
+
+  </body>
+
+</html>
